@@ -4,7 +4,7 @@ const getRandomWord = (words: string[]) => {
   return words[Math.floor(Math.random() * words.length)];
 };
 
-type Config = {
+export type NametagConfig = {
   delimiter?: string;
   words?: number;
   categories?: ("animals" | "food" | "adjectives")[];
@@ -18,7 +18,7 @@ const inputVal = v.object({
   delimiter: v.optional(v.string(), "-"),
 });
 
-const nametag = (config?: Config) => {
+const nametag = (config?: NametagConfig) => {
   const { words, categories, delimiter } = v.parse(inputVal, config);
   const output = [];
 
