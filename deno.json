@@ -1,5 +1,8 @@
 {
+  "version": "0.0.1",
+  "name": "@baosoy/nametag",
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "dev": "deno run --watch main.ts",
+    "test": "deno test mod_tests.ts"
   }
 }
