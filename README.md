@@ -5,7 +5,11 @@ NameTag is a simple username generator with a dictionary of safe words to use to
 ## How to use
 
 ```ts
+<<<<<<< Updated upstream
 import { nametag } from "https://deno.land/x/nametag@0.0.2/mod.ts";
+=======
+import { nametag } from "https://deno.land/x/nametag@0.0.3/mod.ts";
+>>>>>>> Stashed changes
 
 const friendlyName = nametag();
 ```
@@ -16,7 +20,11 @@ Or with a configuration:
 import {
   nametag,
   type NametagConfig,
+<<<<<<< Updated upstream
 } from "https://deno.land/x/nametag@0.0.2/mod.ts";
+=======
+} from "https://deno.land/x/nametag@0.0.3/mod.ts";
+>>>>>>> Stashed changes
 
 const config: NametagConfig = {
   words: 5,

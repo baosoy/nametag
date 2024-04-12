@@ -41,3 +41,10 @@ it(config, "can set all options at once", () => {
     assertEquals(dictionary.food.includes(word), false);
   });
 });
+
+const base = describe({ name: "base" });
+
+it(base, "works with no config", () => {
+  const result = nametag();
+  assertEquals(typeof result, "string");
+});

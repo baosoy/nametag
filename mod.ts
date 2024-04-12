@@ -12,11 +12,18 @@ export type NametagConfig = {
 
 const CATEGORIES = ["adjectives", "animals", "food"];
 
-const inputVal = v.object({
-  categories: v.optional(v.array(v.picklist(CATEGORIES)), CATEGORIES),
-  words: v.optional(v.number(), 3),
-  delimiter: v.optional(v.string(), "-"),
-});
+const inputVal = v.optional(
+  v.object({
+    categories: v.optional(v.array(v.picklist(CATEGORIES)), CATEGORIES),
+    words: v.optional(v.number(), 3),
+    delimiter: v.optional(v.string(), "-"),
+  }),
+  {
+    categories: ["animals", "food", "adjectives"],
+    words: 3,
+    delimiter: "-",
+  }
+);
 
 const nametag = (config?: NametagConfig) => {
   const { words, categories, delimiter } = v.parse(inputVal, config);
