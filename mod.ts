@@ -22,7 +22,7 @@ const inputVal = v.optional(
     categories: ["animals", "food", "adjectives"],
     words: 3,
     delimiter: "-",
-  }
+  },
 );
 
 const nametag = (config?: NametagConfig) => {
@@ -41,8 +41,8 @@ const nametag = (config?: NametagConfig) => {
               categories[
                 Math.floor(Math.random() * length)
               ] as keyof typeof dictionary
-            ]
-          )
+            ],
+          ),
         );
       } else {
         output.push(
@@ -51,8 +51,8 @@ const nametag = (config?: NametagConfig) => {
               categories[
                 Math.floor(Math.random() * categories.length)
               ] as keyof typeof dictionary
-            ]
-          )
+            ],
+          ),
         );
       }
     } else {
@@ -62,8 +62,8 @@ const nametag = (config?: NametagConfig) => {
             categories[
               Math.floor(Math.random() * categories.length)
             ] as keyof typeof dictionary
-          ]
-        )
+          ],
+        ),
       );
     }
   }
