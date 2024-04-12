@@ -1,6 +1,8 @@
 {
-  "version": "0.0.3",
+  "version": "0.0.4",
   "name": "@baosoy/nametag",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "A simple friendly username generator",
   "tasks": {
     "dev": "deno run --watch main.ts",
     "test": "deno test mod_tests.ts"
