@@ -1,2 +1,3 @@
-import * as v from "https://deno.land/x/valibot@v0.30.0/mod.ts";
-export { v };
+import * as v from "@valibot/valibot";
+import type { BaseSchema } from "@valibot/valibot";
+export { v, type BaseSchema };

@@ -1,5 +1,15 @@
 {
   "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@valibot/valibot@^0.30.0": "jsr:@valibot/valibot@0.30.0"
+    },
+    "jsr": {
+      "@valibot/valibot@0.30.0": {
+        "integrity": "a0a8701bc789a7bf91bff22308c590c22ac7d6076617289b04125490954bebe2"
+      }
+    }
+  },
   "remote": {
     "https://deno.land/std@0.163.0/fmt/colors.ts": "9e36a716611dcd2e4865adea9c4bec916b5c60caad4cdcdc630d4974e6bb8bd4",
     "https://deno.land/std@0.163.0/testing/_diff.ts": "a23e7fc2b4d8daa3e158fa06856bedf5334ce2a2831e8bf9e509717f455adb2c",
@@ -378,5 +388,10 @@
     "https://deno.land/x/valibot@v0.30.0/src/validations/uuid/uuid.ts": "3fd12ef01a38b02ab8cf05a69ec1935e4e85603f9063ca58ee4e57ba90a27c94",
     "https://deno.land/x/valibot@v0.30.0/src/validations/value/index.ts": "5d0815e3877c5e4548b222597d37fd277f46044193039c7a42539af34e655914",
     "https://deno.land/x/valibot@v0.30.0/src/validations/value/value.ts": "888902cb5747629250cac155b56a530572bd76b3df2f09360643312496374adc"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@valibot/valibot@^0.30.0"
+    ]
   }
 }

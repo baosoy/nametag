@@ -1,6 +1,6 @@
 import * as dictionary from "./words.ts";
-import { v } from "./deps.ts";
-const getRandomWord = (words: string[]) => {
+import { v, type BaseSchema } from "./deps.ts";
+const getRandomWord = (words: string[]): string => {
   return words[Math.floor(Math.random() * words.length)];
 };
 
@@ -22,10 +22,17 @@ const inputVal = v.optional(
     categories: ["animals", "food", "adjectives"],
     words: 3,
     delimiter: "-",
-  },
-);
+  }
+) as BaseSchema<
+  NametagConfig,
+  {
+    delimiter: string;
+    categories: string[];
+    words: number;
+  }
+>;
 
-const nametag = (config?: NametagConfig) => {
+export const nametag = (config?: NametagConfig): string => {
   const { words, categories, delimiter } = v.parse(inputVal, config);
   const output = [];
 
@@ -41,8 +48,8 @@ const nametag = (config?: NametagConfig) => {
               categories[
                 Math.floor(Math.random() * length)
               ] as keyof typeof dictionary
-            ],
-          ),
+            ]
+          )
         );
       } else {
         output.push(
@@ -51,8 +58,8 @@ const nametag = (config?: NametagConfig) => {
               categories[
                 Math.floor(Math.random() * categories.length)
               ] as keyof typeof dictionary
-            ],
-          ),
+            ]
+          )
         );
       }
     } else {
@@ -62,13 +69,11 @@ const nametag = (config?: NametagConfig) => {
             categories[
               Math.floor(Math.random() * categories.length)
             ] as keyof typeof dictionary
-          ],
-        ),
+          ]
+        )
       );
     }
   }
 
   return output.join(delimiter);
 };
-
-export { nametag };
